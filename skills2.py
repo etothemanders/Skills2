@@ -84,7 +84,7 @@ def sum_zero(list1):
 Given a list of words, return a list of words with duplicates removed
 """
 def find_duplicates(words):
-    pass
+    return list(set(words))
 
 """
 Given a list of words, print the words in ascending order of length
