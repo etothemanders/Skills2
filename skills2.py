@@ -1,7 +1,7 @@
 string1 = "I do not like green eggs and ham."
 list1 = [2, 5, 12, 6, 1, -5, 8, 5, 6, -2, 2, 27]
 list2 = [-5, 6, 4, 8, 15, 16, 23, 42, 2, 7]
-words = ["I", "do", "not", "like", "green", "eggs", "and", "ham", "I", "do", "not", "like", "them", "San", "I", "am"]
+words = ["I", "do", "not", "like", "green", "eggs", "and", "ham", "I", "do", "not", "like", "them", "Sam", "I", "am"]
 
 """
 Write a function that takes a string and produces a dictionary with
@@ -92,7 +92,8 @@ Bonus: do it on a file instead of the list provided
 Bonus: print the words in alphabetical order in ascending order of length
 """
 def word_length(words):
-    pass
+    return sorted(words, key=len)
+
 
 """
 Here's a table of English to Pirate translations
@@ -120,3 +121,40 @@ man         matey
 Write a program that asks the user to type in a sentence and then
 print the sentece translated to pirate.
 """
+
+def english_to_pirate():
+    d = {
+        'sir': 'matey',
+        'hotel': 'fleabag inn',
+        'student': 'swabbie',
+        'boy': 'matey',
+        'madam': 'proud beauty',
+        'professor': 'foul blaggart',
+        'restaurant': 'galley',
+        'your': 'yer',
+        'excuse': 'arr',
+        'students': 'swabbies',
+        'are': 'be',
+        'lawyer': 'foul blaggart',
+        'the': "th'",
+        'restroom': 'head',
+        'my': 'me',
+        'hello': 'avast',
+        'is': 'be',
+        'man': 'matey'
+    }
+
+    english = raw_input('Sentence to translate to pirate-ese: ')
+    translated_words = []
+
+    for word in english.rstrip().lower().split():
+        pirate_word = d.get(word, word)
+        translated_words.append(pirate_word)
+
+    translation = ' '.join(translated_words)
+
+    print 'In pirate-ese is: ', translation
+
+
+
+

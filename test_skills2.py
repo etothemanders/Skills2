@@ -24,6 +24,9 @@ class TestSkills2(unittest.TestCase):
     def test_find_duplicates(self):
         self.assertEqual(find_duplicates(self.words), ['and', 'do', 'them', 'like', 'Sam', 'I', 'eggs', 'am', 'green', 'not', 'ham'])
 
+    def test_word_length(self):
+        self.assertEqual(word_length(self.words), ["I", "I", "I", "do", "do", "am", "not", "and", "ham", "not", "Sam", "like", "eggs", "like", "them", "green"])
+
     
 
 if __name__ == "__main__":
